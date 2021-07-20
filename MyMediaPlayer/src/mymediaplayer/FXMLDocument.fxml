@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mymediaplayer.FXMLDocumentController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
-</AnchorPane>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fitHeight="200.0" fitWidth="200.0" />
+            <VBox alignment="BOTTOM_CENTER" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" prefWidth="100.0" StackPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Slider>
+                     <VBox.margin>
+                        <Insets left="3.0" right="3.0" />
+                     </VBox.margin>
+                  </Slider>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Choose File">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Play">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Pause">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Stop">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="&lt;&lt;&lt;">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="&gt;&gt;&gt;">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="-10s">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="+10s">
+                           <HBox.margin>
+                              <Insets left="7.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Slider>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
