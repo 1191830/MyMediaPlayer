@@ -9,12 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mymediaplayer.FXMLDocumentController">
    <center>
-      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <StackPane prefHeight="500.0" prefWidth="900.0" BorderPane.alignment="CENTER">
          <children>
-            <MediaView fitHeight="200.0" fitWidth="200.0" />
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
             <VBox alignment="BOTTOM_CENTER" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" prefWidth="100.0" StackPane.alignment="BOTTOM_CENTER">
                <children>
                   <Slider>
@@ -24,42 +23,42 @@
                   </Slider>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Choose File">
+                        <Button mnemonicParsing="false" onAction="#chooseFileMethod" text="Choose File">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Play">
+                        <Button mnemonicParsing="false" onAction="#play" text="Play">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Pause">
+                        <Button mnemonicParsing="false" onAction="#pause" text="Pause">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Stop">
+                        <Button mnemonicParsing="false" onAction="#stop" text="Stop">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="&lt;&lt;&lt;">
+                        <Button mnemonicParsing="false" onAction="#slowRate" text="&lt;&lt;&lt;">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="&gt;&gt;&gt;">
+                        <Button mnemonicParsing="false" onAction="#fastForward" text="&gt;&gt;&gt;">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="-10s">
+                        <Button mnemonicParsing="false" onAction="#back10" text="-10s">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="+10s">
+                        <Button mnemonicParsing="false" onAction="#skip10" text="+10s">
                            <HBox.margin>
                               <Insets left="7.0" top="7.0" />
                            </HBox.margin>
